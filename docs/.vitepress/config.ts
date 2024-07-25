@@ -3,7 +3,7 @@ export default defineConfig({
   title: 'Yuuya-UI',
   description: 'A UI library based on Vue 3',
   lang: 'zh-CN',
-  base: '/',
+  base: '/yuuya-ui/',
   lastUpdated: true,
   themeConfig: {
     logo: '/ui-logo.svg',
