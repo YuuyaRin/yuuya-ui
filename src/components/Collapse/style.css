@@ -1,0 +1,52 @@
+.yuuya-collapse {
+  --yuuya-collapse-border-color: var(--yuuya-border-color-light);
+  --yuuya-collapse-header-height: 48px;
+  --yuuya-collapse-header-bg-color: var(--yuuya-fill-color-blank);
+  --yuuya-collapse-header-text-color: var(--yuuya-text-color-primary);
+  --yuuya-collapse-header-font-size: 13px;
+  --yuuya-collapse-content-bg-color: var(--yuuya-fill-color-blank);
+  --yuuya-collapse-content-font-size: 13px;
+  --yuuya-collapse-content-text-color: var(--yuuya-text-color-primary);
+  --yuuya-collapse-disabled-text-color: var(--yuuya-text-color-disabled);
+  --yuuya-collapse-disabled-border-color: var(--yuuya-border-color-lighter);
+  border-top: 1px solid var(--yuuya-collapse-border-color);
+  border-bottom: 1px solid var(--yuuya-collapse-border-color);
+}
+.yuuya-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--yuuya-collapse-header-height);
+  line-height: var(--yuuya-collapse-header-height);
+  background-color: var(--yuuya-collapse-header-bg-color);
+  color: var(--yuuya-collapse-header-text-color);
+  font-size: var(--yuuya-collapse-header-font-size);
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-bottom-color 0.2s ease;
+  outline: none;
+  border-bottom: 1px solid var(--yuuya-collapse-border-color);
+  &.is-disabled {
+    color: var(--yuuya-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+  }
+}
+.yuuya-collapse-item__content {
+  will-change: height;
+  background-color: var(--yuuya-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--yuuya-collapse-content-font-size);
+  color: var(--yuuya-collapse-content-text-color);
+  border-bottom: 1px solid var(--yuuya-collapse-border-color);
+  padding-bottom: 25px;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: height 0.2s ease-in-out;
+}

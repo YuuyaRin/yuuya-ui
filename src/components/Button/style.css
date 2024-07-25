@@ -1,0 +1,122 @@
+.yuuya-button {
+  --yuuya-button-font-weight: var(--yuuya-font-weight-primary);
+  --yuuya-button-border-color: var(--yuuya-border-color);
+  --yuuya-button-bg-color: var(--yuuya-fill-color-blank);
+  --yuuya-button-text-color: var(--yuuya-text-color-regular);
+  --yuuya-button-disabled-text-color: var(--yuuya-disabled-text-color);
+  --yuuya-button-disabled-bg-color: var(--yuuya-fill-color-blank);
+  --yuuya-button-disabled-border-color: var(--yuuya-border-color-light);
+  --yuuya-button-hover-text-color: var(--yuuya-color-primary);
+  --yuuya-button-hover-bg-color: var(--yuuya-color-primary-light-9);
+  --yuuya-button-hover-border-color: var(--yuuya-color-primary-light-7);
+  --yuuya-button-active-text-color: var(--yuuya-button-hover-text-color);
+  --yuuya-button-active-border-color: var(--yuuya-color-primary);
+  --yuuya-button-active-bg-color: var(--yuuya-button-hover-bg-color);
+  --yuuya-button-outline-color: var(--yuuya-color-primary-light-5);
+  --yuuya-button-acitve-color: var(--yuuya-text-color-primary);
+}
+.yuuya-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--yuuya-button-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: var(--yuuya-button-font-weight);
+  user-select: none; /*属性规定是否能选取元素的文本*/
+  vertical-align: middle;
+  -webkit-appearance: none; /*去除默认样式,取值有button,radio,checkbox,searchfield,none*/
+  background-color: var(--yuuya-button-bg-color);
+  border: var(--yuuya-border);
+  border-color: var(--yuuya-button-border-color);
+  padding: 8px 15px;
+  font-size: var(--yuuya-font-size-base);
+  border-radius: var(--yuuya-border-radius-base);
+  & + & {
+    margin-left: 14px;
+  }
+  &:hover,
+  &:focus {
+    color: var(--yuuya-button-hover-text-color);
+    border-color: var(--yuuya-button-hover-border-color);
+    background-color: var(--yuuya-button-hover-bg-color);
+    outline: none;
+  }
+  &:active {
+    color: var(--yuuya-button-active-text-color);
+    border-color: var(--yuuya-button-active-border-color);
+    background-color: var(--yuuya-button-active-bg-color);
+    outline: none;
+  }
+  &.is-plain {
+    --yuuya-button-hover-text-color: var(--yuuya-color-primary);
+    --yuuya-button-hover-bg-color: var(--yuuya-fill-color-blank);
+    --yuuya-button-hover-border-color: var(--yuuya-color-primary);
+  }
+  &.is-round {
+    border-radius: var(--yuuya-border-radius-round);
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 8px;
+  }
+  /* disabled */
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus,
+  &[disabled],
+  [disabled]:hover,
+  [disabled]:focus {
+    color: var(--yuuya-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: var(--yuuya-button-disabled-bg-color);
+    border-color: var(--yuuya-button-disabled-border-color);
+  }
+}
+@each $val in primary, success, info, danger, warning {
+  .yuuya-button--$(val) {
+    --yuuya-button-text-color: var(--yuuya-color-white);
+    --yuuya-button-bg-color: var(--yuuya-color-$(val));
+    --yuuya-button-border-color: var(--yuuya-color-$(val));
+    --yuuya-button-outline-color: var(--yuuya-color-$(val)-light-5);
+    --yuuya-button-hover-text-color: var(--yuuya-color-white);
+    --yuuya-button-hover-bg-color: var(--yuuya-color-$(val)-light-3);
+    --yuuya-button-hover-border-color: var(--yuuya-color-$(val)-light-3);
+    /* --yuuya-button-active-text-color: var(--yuuya-color-$(val)-dark-2); */
+    --yuuya-button-active-bg-color: var(--yuuya-color-$(val)-dark-2);
+    --yuuya-button-border-bg-color: var(--yuuya-color-$(val)-dark-2);
+    --yuuya-button-disabled-text-color: var(--yuuya-color-white);
+    --yuuya-button-disabled-bg-color: var(--yuuya-color-$(val)-light-5);
+    --yuuya-button-disabled-border-color: var(--yuuya-color-$(val)-light-5);
+  }
+  .yuuya-button--$(val).is-plain {
+    --yuuya-button-text-color: var(--yuuya-color-$(val));
+    --yuuya-button-bg-color: var(--yuuya-color-$(val)-light-9);
+    --yuuya-button-border-color: var(--yuuya-color-$(val)-light-5);
+    --yuuya-button-hover-text-color: var(--yuuya-color-white);
+    --yuuya-button-hover-bg-color: var(--yuuya-color-$(val));
+    --yuuya-button-hover-border-color: var(--yuuya-color-$(val));
+    --yuuya-button-active-text-color: var(--yuuya-color-white);
+  }
+}
+.yuuya-button--large {
+  --yuuya-button-size: 40px;
+  height: var(--yuuya-button-size);
+  padding: 12px 19px;
+  font-size: var(--yuuya-font-size-base);
+  border-radius: var(--yuuya-border-radius-base);
+}
+.yuuya-button--small {
+  --yuuya-button-size: 24px;
+  height: var(--yuuya-button-size);
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: calc(var(--yuuya-border-radius-base) - 1px);
+}

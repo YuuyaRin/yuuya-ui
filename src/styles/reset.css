@@ -1,0 +1,79 @@
+body {
+  font-family: var(--yuuya-font-family);
+  font-weight: 400;
+  font-size: var(--yuuya-font-size-base);
+  color: var(--yuuya-text-color-primary);
+  /* font-smoothing是非标准的CSS定义,以下设定增加字体抗锯齿效果 */
+  -webkit-font-smoothing: antialiased; /*chrome、safari*/
+  -moz-osx-font-smoothing: grayscale; /*firefox*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--yuuya-color-primary);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--yuuya-color-primary-light-3);
+  }
+  &:active {
+    color: var(--yuuya-color-primary-dark-2);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--yuuya-text-color-regular);
+  font-weight: inherit;
+  &:first-child {
+    margin-top: 0px;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+h1 {
+  font-size: calc(--yuuya-font-size-base + 6px);
+}
+h2 {
+  font-size: calc(--yuuya-font-size-base + 4px);
+}
+h3 {
+  font-size: calc(--yuuya-font-size-base + 2px);
+}
+h4,
+h5,
+h6,
+p {
+  font-size: initial;
+}
+
+p {
+  line-height: 1.8;
+  &:first-child {
+    margin-top: 0px;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+sub,
+sup {
+  font-size: calc(--yuuya-font-size-base - 1px);
+}
+small {
+  font-size: calc(--yuuya-font-size-base - 2px);
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid var(--yuuya-border-color-lighter);
+}
