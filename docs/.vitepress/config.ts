@@ -14,6 +14,22 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/YuuyaRin/yuuya-ui'
       }
+    ],
+    nav: [
+      {
+        text: '指南',
+        link: '/guide'
+      },
+      {
+        text: '组件',
+        link: '/components/'
+      }
+    ],
+    sidebar: [
+      {
+        text: '基础组件 Basic',
+        items: [{ text: 'Button' }]
+      }
     ]
   }
 })
