@@ -13,20 +13,20 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /components/
+      link: /guide.md
     - theme: brand
       text: 查看文档
-      link: /components/Button/devDoc.md
+      link: /components/
 features:
   - icon: 🛠️
     title: 技术选型
     details: 基于Typescript+vue3
   - icon: 📦
     title: 基础UI组件库
-    details: 起步阶段，持续更新
+    details: 随缘更新
   - icon: 🔨
     title: 个人开发
-    details: 更新可能缓慢
+    details: 没时间摸鱼就停更
 ---
 
 <p style="display: flex;
