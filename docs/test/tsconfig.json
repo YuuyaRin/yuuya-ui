@@ -1,0 +1,40 @@
+// tsconfig.json
+{
+  // "extends": "@tsconfig/node20/tsconfig.json",
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "types": [
+      "node",
+      // 用来指定需要包含的模块，并将其包含在全局范围内。
+      "../src/components/components.d.ts"
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": "../"
+  }
+}
