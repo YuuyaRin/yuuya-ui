@@ -1,7 +1,25 @@
 # Button
 
-### 测试
+### default
 
-:::demo `继承el-button所有属性`
+:::demo
 button/index
+:::
+
+### type
+
+:::demo
+button/type
+:::
+
+### size
+
+:::demo
+button/size
+:::
+
+### disabled
+
+:::demo
+button/disabled
 :::
