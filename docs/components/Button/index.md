@@ -12,14 +12,20 @@ button/index
 button/type
 :::
 
-### size
+### plain
 
 :::demo
-button/size
+button/plain
 :::
 
 ### disabled
 
 :::demo
 button/disabled
+:::
+
+### size
+
+:::demo
+button/size
 :::
