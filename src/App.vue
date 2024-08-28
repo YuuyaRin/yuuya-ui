@@ -4,6 +4,7 @@ import { onMounted, ref } from 'vue'
 import type { ButtonInstance } from './components/Button/types.ts'
 import Collapse from './components/Collapse/Collapse.vue'
 import Item from './components/Collapse/CollapseItem.vue'
+import Icon from './components/Icon/Icon.vue'
 // 获取button实例
 const buttonRef = ref<ButtonInstance | null>()
 // collapse测试参数
@@ -75,6 +76,10 @@ onMounted(() => {
           <div>内容slot</div>
         </Item>
       </Collapse>
+    </section>
+    <section class="component-section">
+      <h1>Icon</h1>
+      <Icon icon="fa-solid fa-star" size="2xl" spin />
     </section>
   </main>
 </template>
