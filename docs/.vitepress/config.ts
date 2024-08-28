@@ -29,7 +29,10 @@ export default defineConfig({
     sidebar: [
       {
         text: '基础组件 Basic',
-        items: [{ text: 'Button', link: '/components/Button/index.md' }]
+        items: [
+          { text: 'Button', link: '/components/Button/index.md' },
+          { text: 'Collapse', link: '/components/Collapse/index.md' }
+        ]
       }
     ]
   },
