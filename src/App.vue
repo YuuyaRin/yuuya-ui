@@ -79,7 +79,19 @@ onMounted(() => {
     </section>
     <section class="component-section">
       <h1>Icon</h1>
-      <Icon icon="fa-solid fa-star" size="2xl" spin />
+      <div class="section">
+        <h3>Type</h3>
+        <Icon icon="fa-solid fa-star" size="2xl" spin />
+        <Icon icon="fa-solid fa-star" size="2xl" spin type="primary" />
+        <Icon icon="fa-solid fa-star" size="2xl" spin type="info" />
+        <Icon icon="fa-solid fa-star" size="2xl" spin type="warning" />
+        <Icon icon="fa-solid fa-star" size="2xl" spin type="danger" />
+      </div>
+      <div class="section">
+        <h3>Color</h3>
+        <Icon icon="fa-solid fa-star" size="2xl" spin color="#ff00ff" />
+        <Icon icon="fa-solid fa-star" size="2xl" spin color="pink" />
+      </div>
     </section>
   </main>
 </template>

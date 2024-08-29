@@ -1,0 +1,15 @@
+.yuuya-icon {
+  --yuuya-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--yuuya-icon-color);
+  font-size: inherit;
+}
+@each $val in primary, info, success, warning, danger {
+  .yuuya-icon--$(val) {
+    --yuuya-icon-color: var(--yuuya-color-$(val));
+  }
+}
