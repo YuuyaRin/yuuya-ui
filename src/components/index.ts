@@ -1,6 +1,7 @@
 import YuuyaButton from './Button'
 import YuuyaCollapse from './Collapse'
 import YuuyaCollapseItem from './Collapse/item'
+import YuuyaIcon from './Icon'
 import '@/styles/index.css'
 
 import type { Component, App } from 'vue'
@@ -10,7 +11,8 @@ const components: {
 } = {
   YuuyaButton,
   YuuyaCollapse,
-  YuuyaCollapseItem
+  YuuyaCollapseItem,
+  YuuyaIcon
 }
 
 // 插件声明：声明所有插件
@@ -34,6 +36,6 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export { YuuyaButton, YuuyaCollapse, YuuyaCollapseItem }
+export { YuuyaButton, YuuyaCollapse, YuuyaCollapseItem, YuuyaIcon }
 
 export default install

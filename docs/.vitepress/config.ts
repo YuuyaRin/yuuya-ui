@@ -1,5 +1,9 @@
 import { defineConfig } from 'vitepress'
 import { mdPlugin } from './config/plugins'
+// 使用fontawesome添加图标
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
 export default defineConfig({
   title: 'Yuuya-UI',
   description: 'A UI library based on Vue 3',
@@ -31,7 +35,8 @@ export default defineConfig({
         text: '基础组件 Basic',
         items: [
           { text: 'Button', link: '/components/Button/index.md' },
-          { text: 'Collapse', link: '/components/Collapse/index.md' }
+          { text: 'Collapse', link: '/components/Collapse/index.md' },
+          { text: 'Icon', link: '/components/Icon/index.md' }
         ]
       }
     ]
