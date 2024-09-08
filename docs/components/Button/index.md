@@ -29,3 +29,9 @@ button/disabled
 :::demo
 button/size
 :::
+
+### icon
+
+:::demo
+button/icon
+:::
