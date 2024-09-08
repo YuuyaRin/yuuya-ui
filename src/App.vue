@@ -57,6 +57,11 @@ onMounted(() => {
         <Button plain>Test Button Test Button</Button>
         <Button size="large" plain>Test Button Test Button</Button>
       </div>
+      <div class="section">
+        <h3>Icon</h3>
+        <Button :loading="true" size="large">loading</Button>
+        <Button icon="fa-solid fa-star">Icon</Button>
+      </div>
     </section>
 
     <section class="component-section">

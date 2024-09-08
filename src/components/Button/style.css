@@ -79,6 +79,10 @@
     background-color: var(--yuuya-button-disabled-bg-color);
     border-color: var(--yuuya-button-disabled-border-color);
   }
+  [class*='yuuya-icon'] + span {
+    /* 图标和文字之间的距离 */
+    margin-left: 6px;
+  }
 }
 @each $val in primary, success, info, danger, warning {
   .yuuya-button--$(val) {

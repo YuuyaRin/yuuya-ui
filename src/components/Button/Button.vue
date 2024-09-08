@@ -9,18 +9,22 @@
       'is-plain': plain,
       'is-round': round,
       'is-circle': circle,
-      'is-disabled': disabled
+      'is-disabled': disabled || loading,
+      'is-loading': loading
     }"
     :disabled="disabled"
     :type="nativeType"
     :autofocus="autofocus"
   >
+    <Icon icon="spinner" spin v-if="loading"></Icon>
+    <Icon :icon="icon" v-if="icon"></Icon>
     <span><slot></slot></span>
   </button>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { ButtonProps } from './types.ts'
+import Icon from '../Icon/Icon.vue'
 defineOptions({
   name: 'YuuyaButton'
 })
