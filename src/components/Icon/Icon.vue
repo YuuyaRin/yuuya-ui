@@ -1,5 +1,10 @@
 <template>
-  <i class="yuuya-icon" :class="{ [`yuuya-icon--${type}`]: type }" :style="customStyles">
+  <i
+    class="yuuya-icon"
+    :class="{ [`yuuya-icon--${type}`]: type }"
+    :style="customStyles"
+    v-bind="$attrs"
+  >
     <!-- $props 将外部props全部传入此组件 -->
     <font-awesome-icon v-bind="filteredProps" />
   </i>

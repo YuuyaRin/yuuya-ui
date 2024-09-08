@@ -7,6 +7,7 @@
       @click="handleClick"
     >
       <slot name="title">{{ title }}</slot>
+      <icon icon="angle-right" class="header-angle"></icon>
     </div>
     <Transition name="slide" v-bind="transitionEvents">
       <div class="yuuya-collapse-item__wrapper" v-show="isActive">
@@ -22,6 +23,7 @@
 import { inject, computed } from 'vue'
 import type { CollapseItemProps } from './types'
 import { CollapseContextKey } from './types'
+import Icon from '../Icon/Icon.vue'
 // 注册组件
 defineOptions({
   name: 'YuuyaCollapseItem'

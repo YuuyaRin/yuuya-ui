@@ -33,6 +33,14 @@
   }
   &.is-active {
     border-bottom-color: transparent;
+    /* header箭头旋转 */
+    .header-angle {
+      transform: rotate(90deg);
+    }
+  }
+  /* header箭头 */
+  .header-angle {
+    transition: transform var(--yuuya-transition-duration);
   }
 }
 .yuuya-collapse-item__content {
@@ -48,5 +56,5 @@
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: height 0.2s ease-in-out;
+  transition: height var(--yuuya-transition-duration);
 }

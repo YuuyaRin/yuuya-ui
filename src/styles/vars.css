@@ -110,4 +110,8 @@
   --yuuya-disabled-bg-color: var(--yuuya-fill-color-light);
   --yuuya-disabled-text-color: var(--yuuya-text-color-placeholder);
   --yuuya-disabled-border-color: var(--yuuya-border-color-light);
+
+  /* animation */
+  --yuuya-transition-duration: 0.3s;
+  --yuuya-transition-duration-fast: 0.2s;
 }
