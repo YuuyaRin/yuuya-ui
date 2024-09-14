@@ -6,6 +6,7 @@ import Collapse from './components/Collapse/Collapse.vue'
 import Item from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
 import Intro from './components/Intro/Intro.vue'
+import Test from './components/test.vue'
 // 获取button实例
 const buttonRef = ref<ButtonInstance | null>()
 // collapse测试参数
@@ -130,6 +131,7 @@ const introConfig = ref({
       </div>
       <Intro :config="introConfig" v-model="introVisible"></Intro>
     </section>
+    <Test></Test>
   </main>
 </template>
 <style scoped>

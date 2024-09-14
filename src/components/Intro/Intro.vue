@@ -151,7 +151,7 @@ const props = defineProps({
   },
   config: {
     type: Object,
-    default: {}
+    default: () => {}
   }
 })
 const emits = defineEmits(['update:modelValue', 'close'])
