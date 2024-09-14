@@ -241,10 +241,10 @@ const setBoxInfo = async (index?: number | undefined) => {
     if (index === undefined) {
       index = currentIndex.value
     }
-    if (props.modelValue) {
-      // 禁止页面滚动
-      document.body.style.overflow = 'hidden'
-    }
+    // if (props.modelValue) {
+    // 禁止页面滚动
+    document.body.style.overflow = 'hidden'
+    // }
     // 根据选择器获取对应元素
     let el = props.config.tips[index].el
     let box = document.querySelector(el)
@@ -298,6 +298,7 @@ const next = async () => {
 }
 // 完成
 const done = () => {
+  document.body.style.overflow = 'auto'
   emits('update:modelValue', false)
   emits('close')
 }
