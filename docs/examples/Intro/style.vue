@@ -1,10 +1,10 @@
 <template>
   <div class="section">
     <yuuya-button type="primary" @click="introVisible = true">Open</yuuya-button>
-    <yuuya-button id="target1">top</yuuya-button>
-    <yuuya-button id="target2">left</yuuya-button>
-    <yuuya-button id="target3">right</yuuya-button>
-    <yuuya-button id="target4">bottom</yuuya-button>
+    <yuuya-button id="target3-1">1</yuuya-button>
+    <yuuya-button id="target3-2">2</yuuya-button>
+    <yuuya-button id="target3-3">3</yuuya-button>
+    <yuuya-button id="target3-4">4</yuuya-button>
     <yuuya-intro :config="introConfig" v-model="introVisible"></yuuya-intro>
   </div>
 </template>
@@ -13,21 +13,31 @@ import { ref } from 'vue'
 
 const introVisible = ref(false)
 const introConfig = ref({
+  backgroundColor: 'rgba(106,112,211,0.2)',
+  titleStyle: {
+    color: 'pink',
+    fontSize: '20px',
+    fontWeight: 'bold'
+  },
+  contentStyle: {
+    color: 'blue',
+    textDecoration: 'underline'
+  },
   tips: [
     {
-      content: '内容1',
-      el: '#target1',
+      content: 'backgroundColor设置遮罩层颜色',
+      el: '#target3-1',
       tipPosition: 'top'
     },
     {
-      title: '带标题Intro',
-      content: '内容2',
-      el: '#target2',
+      title: 'titleStyle',
+      content: '自定义标题样式',
+      el: '#target3-2',
       tipPosition: 'left'
     },
     {
-      content: '333',
-      el: '#target3',
+      content: 'contentStyle自定义内容样式',
+      el: '#target3-3',
       tipPosition: 'right',
       onNext() {
         alert('onNext')
@@ -36,7 +46,7 @@ const introConfig = ref({
     },
     {
       content: '444',
-      el: '#target4',
+      el: '#target3-4',
       tipPosition: 'bottom',
       onPrev() {
         alert('onPrev')

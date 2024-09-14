@@ -60,6 +60,7 @@
                 <div
                   class="dot"
                   v-for="(item, index) in config?.tips || []"
+                  :key="item.el"
                   :class="{ 'is-active': index === currentIndex }"
                 ></div>
               </div>
@@ -67,6 +68,7 @@
                 name="prev"
                 v-bind:index="currentIndex"
                 v-bind:tipItem="currentTips"
+                v-bind:handle="prev"
                 v-if="currentIndex !== 0"
               >
                 <YuuyaButton @click="prev">上一步</YuuyaButton>
@@ -75,6 +77,7 @@
                 name="next"
                 v-bind:index="currentIndex"
                 v-bind:tipItem="currentTips"
+                v-bind:handle="next"
                 v-if="currentIndex !== config.tips.length - 1"
               >
                 <YuuyaButton type="primary" @click="next">下一步</YuuyaButton>
@@ -83,6 +86,7 @@
                 name="done"
                 v-bind:index="currentIndex"
                 v-bind:tipItem="currentTips"
+                v-bind:handle="done"
                 v-if="currentIndex === config.tips.length - 1"
               >
                 <YuuyaButton type="primary" @click="done">完成</YuuyaButton>
@@ -92,6 +96,7 @@
                 name="skip"
                 v-bind:index="currentIndex"
                 v-bind:tipItem="currentTips"
+                v-bind:handle="done"
               >
                 <el-button @click="done">跳过</el-button>
               </slot> -->
