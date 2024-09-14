@@ -36,7 +36,11 @@ export default defineConfig({
         items: [
           { text: 'Button', link: '/components/Button/index.md' },
           { text: 'Collapse', link: '/components/Collapse/index.md' },
-          { text: 'Icon', link: '/components/Icon/index.md' }
+          { text: 'Icon', link: '/components/Icon/index.md' },
+          {
+            text: 'Intro',
+            link: '/components/Intro/index.md'
+          }
         ]
       }
     ]

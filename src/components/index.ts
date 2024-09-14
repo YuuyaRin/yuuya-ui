@@ -2,6 +2,7 @@ import YuuyaButton from './Button'
 import YuuyaCollapse from './Collapse'
 import YuuyaCollapseItem from './Collapse/item'
 import YuuyaIcon from './Icon'
+import YuuyaIntro from './Intro'
 import '@/styles/index.css'
 
 import type { Component, App } from 'vue'
@@ -12,7 +13,8 @@ const components: {
   YuuyaButton,
   YuuyaCollapse,
   YuuyaCollapseItem,
-  YuuyaIcon
+  YuuyaIcon,
+  YuuyaIntro
 }
 
 // 插件声明：声明所有插件
