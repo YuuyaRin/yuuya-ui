@@ -13,8 +13,8 @@ export interface ButtonProps {
   disabled?: boolean
   nativeType?: NativeType
   autofocus?: boolean
-  icon: string
-  loading: boolean
+  icon?: string
+  loading?: boolean
 }
 // button 暴露实例ref interface
 export type ButtonInstance = {

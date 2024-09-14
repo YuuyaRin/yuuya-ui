@@ -5,12 +5,34 @@ import type { ButtonInstance } from './components/Button/types.ts'
 import Collapse from './components/Collapse/Collapse.vue'
 import Item from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
+import Intro from './components/Intro/Intro.vue'
 // 获取button实例
 const buttonRef = ref<ButtonInstance | null>()
 // collapse测试参数
 const openedValue = ref(['a'])
 onMounted(() => {
   console.log('buttonRef', buttonRef.value?.ref)
+})
+// intro
+const introVisible = ref(false)
+const introConfig = ref({
+  tips: [
+    {
+      content: '1111111',
+      el: '#target1',
+      tipPosition: 'top'
+    },
+    {
+      content: '222',
+      el: '#target2',
+      tipPosition: 'top'
+    },
+    {
+      content: '333',
+      el: '#target3',
+      tipPosition: 'top'
+    }
+  ]
 })
 </script>
 
@@ -98,9 +120,18 @@ onMounted(() => {
         <Icon icon="fa-solid fa-star" size="2xl" spin color="pink" />
       </div>
     </section>
+    <section class="component-section">
+      <h1>Intro</h1>
+      <div class="section">
+        <Button type="primary" @click="introVisible = true">Open</Button>
+        <Button id="target1">target1</Button>
+        <Button id="target2">target2</Button>
+        <Button id="target3">target3</Button>
+      </div>
+      <Intro :config="introConfig" v-model="introVisible"></Intro>
+    </section>
   </main>
 </template>
-
 <style scoped>
 .section {
   margin-bottom: 10px;

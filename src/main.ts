@@ -11,9 +11,13 @@ import Button from './components/Button/Button.vue'
 import Collapse from './components/Collapse/Collapse.vue'
 import CollapseItem from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
+import Intro from './components/Intro/Intro.vue'
+import IntroMask from './components/Intro/mask.vue'
 const app = createApp(App)
 app.component('YuuyaButton', Button)
 app.component('YuuyaCollapse', Collapse)
 app.component('YuuyaCollapseItem', CollapseItem)
 app.component('YuuyaIcon', Icon)
+app.component('YuuyaIntro', Intro)
+app.component('YuuyaIntroMask', IntroMask)
 app.mount('#app')
