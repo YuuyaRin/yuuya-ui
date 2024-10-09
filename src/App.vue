@@ -7,6 +7,7 @@ import Item from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
 import Intro from './components/Intro/Intro.vue'
 import Test from './components/test.vue'
+import Alert from './components/Alert/Alert.vue'
 // 获取button实例
 const buttonRef = ref<ButtonInstance | null>()
 // collapse测试参数
@@ -130,6 +131,98 @@ const introConfig = ref({
         <Button id="target3">target3</Button>
       </div>
       <Intro :config="introConfig" v-model="introVisible"></Intro>
+    </section>
+    <section class="compoennt-section">
+      <h1>Alert</h1>
+      <div class="section">
+        <Alert
+          type="primary"
+          :show-icon="true"
+          title="Alert Title"
+          description="Alert Description"
+          :closable="true"
+          closeText="关闭"
+          effect="dark"
+        ></Alert>
+        <Alert
+          type="primary"
+          :show-icon="true"
+          title="Alert Title"
+          description="Alert Description"
+          :closable="true"
+          closeText="关闭"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="primary"
+          effect="dark"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="success"
+          effect="dark"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="info"
+          effect="dark"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="warning"
+          effect="dark"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="danger"
+          effect="dark"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="primary"
+          effect="light"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="success"
+          effect="light"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="info"
+          effect="light"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="warning"
+          effect="light"
+          :closable="true"
+        ></Alert>
+        <Alert
+          :show-icon="true"
+          title="Alert Title"
+          type="danger"
+          effect="light"
+          :closable="true"
+        ></Alert>
+      </div>
     </section>
     <Test></Test>
   </main>

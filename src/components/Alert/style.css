@@ -1,0 +1,75 @@
+.yuuya-alert {
+  --yuuya-alert-padding: 8px 16px;
+  --yuuya-alert-icon-size: 16px;
+  --yuuya-alert-icon-large-size: 24px;
+  --yuuya-alert-bg-color: var(--yuuya-color-white);
+  --yuuya-alert-text-color: var(--yuuya-color-white);
+}
+.yuuya-alert {
+  width: 100%;
+  padding: var(--yuuya-alert-padding);
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: var(--yuuya-border-radius-base);
+  position: relative;
+  background-color: var(--yuuya-alert-bg-color);
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity var(--yuuya-transition-duration-fast);
+  color: var(--yuuya-alert-text-color);
+  .yuuya-alert__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .yuuya-alert_title {
+    line-height: 24px;
+    font-size: var(--yuuya-font-size-medium);
+  }
+  .yuuya-alert_description {
+    font-size: var(--yuuya-font-size-base);
+  }
+  .yuuya-alert_icon {
+    margin-right: 8px;
+    width: var(--yuuya-alert-icon-size);
+    font-size: var(--yuuya-alert-icon-size);
+    &.is-big {
+      margin-right: 12px;
+      font-size: var(--yuuya-alert-icon-large-size);
+    }
+  }
+  .yuuya-alert__close-btn {
+    font-size: var(--yuuya-alert-icon-size);
+    opacity: 1;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    cursor: pointer;
+    &.is-customed {
+      font-style: normal;
+      font-size: var(--yuuya-font-size-base);
+      line-height: 24px;
+      top: 8px;
+    }
+  }
+}
+@each $val in primary, success, info, danger, warning {
+  .yuuya-alert--$(val).is-dark {
+    --yuuya-alert-bg-color: var(--yuuya-color-$(val));
+  }
+  .yuuya-alert--$(val).is-light {
+    --yuuya-alert-bg-color: var(--yuuya-color-$(val)-light-9);
+    --yuuya-alert-text-color: var(--yuuya-color-$(val));
+  }
+  /* .yuuya-button--$(val).is-plain {
+    --yuuya-button-text-color: var(--yuuya-color-$(val));
+    --yuuya-button-bg-color: var(--yuuya-color-$(val)-light-9);
+    --yuuya-button-border-color: var(--yuuya-color-$(val)-light-5);
+    --yuuya-button-hover-text-color: var(--yuuya-color-white);
+    --yuuya-button-hover-bg-color: var(--yuuya-color-$(val));
+    --yuuya-button-hover-border-color: var(--yuuya-color-$(val));
+    --yuuya-button-active-text-color: var(--yuuya-color-white);
+  } */
+}
