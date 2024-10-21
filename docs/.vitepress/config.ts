@@ -40,6 +40,10 @@ export default defineConfig({
           {
             text: 'Intro',
             link: '/components/Intro/index.md'
+          },
+          {
+            text: 'Alert',
+            link: '/components/Alert/index.md'
           }
         ]
       }
